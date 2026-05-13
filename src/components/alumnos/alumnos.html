@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Listado de Alumnos</h2>
+  
+  <div *ngIf="loading" class="alert alert-info">Cargando alumnos...</div>
+  <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+  <table *ngIf="!loading && !error" class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>iPasen</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alumno of alumnos">
+        <td>{{ alumno.id }}</td>
+        <td>{{ alumno.nombre }}</td>
+        <td>{{ alumno.apellidos }}</td>
+        <td>{{ alumno.ipasen }}</td>
+        <td>
+          <a [routerLink]="['/alumno', alumno.id]" class="btn btn-primary">Ver Detalle</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

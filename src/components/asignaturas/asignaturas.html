@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Listado de Asignaturas</h2>
+  <table *ngIf="!loading" class="table">
+    <thead>
+      <tr><th>ID</th><th>Nombre</th><th>Horas</th><th>Profesor</th><th>Acciones</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of asignaturas">
+        <td>{{ a.id }}</td><td>{{ a.nombre }}</td><td>{{ a.horas }}</td><td>{{ a.profesor.nombre }}</td>
+        <td><a [routerLink]="['/asignatura', a.id]" class="btn">Ver Detalle</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

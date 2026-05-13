@@ -1,0 +1,10 @@
+<div class="container" *ngIf="asignatura">
+  <h2>Detalle de la Asignatura</h2>
+  <div class="card">
+    <p><strong>ID:</strong> {{ asignatura.id }}</p>
+    <p><strong>Nombre:</strong> {{ asignatura.nombre }}</p>
+    <p><strong>Horas:</strong> {{ asignatura.horas }}</p>
+    <p><strong>Profesor:</strong> {{ asignatura.profesor.nombre }} {{ asignatura.profesor.apellidos }}</p>
+  </div>
+  <a routerLink="/asignaturas" class="btn btn-secondary">Volver</a>
+</div>

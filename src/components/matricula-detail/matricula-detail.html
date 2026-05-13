@@ -1,0 +1,11 @@
+<div class="container" *ngIf="matricula">
+  <h2>Detalle de la Matrícula</h2>
+  <div class="card">
+    <p><strong>ID:</strong> {{ matricula.idMat }}</p>
+    <p><strong>Alumno:</strong> {{ matricula.alumno.nombre }} {{ matricula.alumno.apellidos }}</p>
+    <p><strong>Asignatura:</strong> {{ matricula.asignatura.nombre }}</p>
+    <p><strong>Curso:</strong> {{ matricula.curso }}</p>
+    <p><strong>Nota Media:</strong> {{ matricula.notaMedia }}</p>
+  </div>
+  <a routerLink="/matriculas" class="btn btn-secondary">Volver</a>
+</div>

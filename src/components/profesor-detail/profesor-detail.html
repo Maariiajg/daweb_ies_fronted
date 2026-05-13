@@ -1,0 +1,10 @@
+<div class="container" *ngIf="profesor">
+  <h2>Detalle del Profesor</h2>
+  <div class="card">
+    <p><strong>ID:</strong> {{ profesor.id }}</p>
+    <p><strong>Nombre:</strong> {{ profesor.nombre }}</p>
+    <p><strong>Apellidos:</strong> {{ profesor.apellidos }}</p>
+    <p><strong>Especialidad:</strong> {{ profesor.especialidad }}</p>
+  </div>
+  <a routerLink="/profesores" class="btn btn-secondary">Volver</a>
+</div>

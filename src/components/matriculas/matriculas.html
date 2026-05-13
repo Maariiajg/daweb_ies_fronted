@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Listado de Matrículas</h2>
+  <table *ngIf="!loading" class="table">
+    <thead>
+      <tr><th>ID</th><th>Alumno</th><th>Asignatura</th><th>Curso</th><th>Nota</th><th>Acciones</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of matriculas">
+        <td>{{ m.idMat }}</td><td>{{ m.alumno.nombre }}</td><td>{{ m.asignatura.nombre }}</td><td>{{ m.curso }}</td><td>{{ m.notaMedia }}</td>
+        <td><a [routerLink]="['/matricula', m.idMat]" class="btn">Ver Detalle</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,14 @@
+<div class="container" *ngIf="alumno">
+  <h2>Detalle del Alumno</h2>
+  <div class="card">
+    <p><strong>ID:</strong> {{ alumno.id }}</p>
+    <p><strong>Nombre:</strong> {{ alumno.nombre }}</p>
+    <p><strong>Apellidos:</strong> {{ alumno.apellidos }}</p>
+    <p><strong>iPasen:</strong> {{ alumno.ipasen }}</p>
+  </div>
+  <a routerLink="/alumnos" class="btn btn-secondary">Volver al listado</a>
+</div>
+<div *ngIf="!alumno && !loading">
+  <p>Alumno no encontrado.</p>
+  <a routerLink="/alumnos" class="btn btn-secondary">Volver al listado</a>
+</div>
