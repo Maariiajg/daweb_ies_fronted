@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Alumno, Asignatura, Matricula, Profesor } from '../models/models';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
