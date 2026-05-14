@@ -32,7 +32,7 @@ export class Matriculas implements OnInit {
   mostrarAprobados(): void {
     this.loading = true;
     this.matriculaService.getMatriculas().subscribe(data => {
-      this.matriculas = data.filter(m => m.notaMedia >= 7);
+      this.matriculas = data.filter(m => m.notaMedia >= 8);
       this.loading = false;
     });
   }
