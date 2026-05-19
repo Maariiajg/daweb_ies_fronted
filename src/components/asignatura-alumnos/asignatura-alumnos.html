@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Alumnos Matriculados</h2>
+  <table *ngIf="!loading" class="table">
+    <thead>
+      <tr><th>ID Matrícula</th><th>Alumno</th><th>Asignatura</th><th>Curso</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of matriculas">
+        <td>{{ m.idMat }}</td>
+        <td>{{ m.alumno.nombre }}</td>
+        <td>{{ m.asignatura.nombre }}</td>
+        <td>{{ m.curso }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -7,14 +7,16 @@ import { MatriculaDetail } from '../components/matricula-detail/matricula-detail
 import { Matriculas } from '../components/matriculas/matriculas';
 import { ProfesorDetail } from '../components/profesor-detail/profesor-detail';
 import { Profesores } from '../components/profesores/profesores';
+import { AsignaturaAlumnos } from '../components/asignatura-alumnos/asignatura-alumnos';
 
 export const routes: Routes = [
-  { path: '', component: Alumnos },
+  { path: 'alumnos', component: Alumnos },
   { path: 'profesores', component: Profesores },
   { path: 'asignaturas', component: Asignaturas },
   { path: 'matriculas', component: Matriculas },
   { path: 'matricula/:id', component: MatriculaDetail },
   { path: 'profesor/:id', component: ProfesorDetail },
   { path: 'asignatura/:id', component: AsignaturaDetail },
-  { path: 'alumno/:id', component: AlumnoDetail }
+  { path: 'alumno/:id', component: AlumnoDetail },
+  { path: 'asignatura/:id/alumnos', component: AsignaturaAlumnos },
 ];
